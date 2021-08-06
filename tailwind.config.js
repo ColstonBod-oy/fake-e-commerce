@@ -15,32 +15,32 @@ module.exports = {
 				"45vw": "45vw",
 			},
 			animation: {
-				"gradient-x": "gradient-x 15s ease infinite",
-				"gradient-y": "gradient-y 15s ease infinite",
-				"gradient-xy": "gradient-xy 15s ease infinite",
+				"fadein-to-b": "fadein-to-b 0.5s ease-out",
+				"fadeout-to-t": "fadeout-to-t 0.5s ease-out",
+				"gradient-to-br": "gradient-to-br 15s ease infinite",
 			},
 			keyframes: {
-				"gradient-y": {
-					"0%, 100%": {
-						"background-size": "400% 400%",
-						"background-position": "center top",
+				"fadein-to-b": {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(-100px)",
 					},
-					"50%": {
-						"background-size": "200% 200%",
-						"background-position": "center center",
-					},
-				},
-				"gradient-x": {
-					"0%, 100%": {
-						"background-size": "200% 200%",
-						"background-position": "left center",
-					},
-					"50%": {
-						"background-size": "200% 200%",
-						"background-position": "right center",
+					"100%": {
+						opacity: "1",
+						transform: "translateY(-89px)",
 					},
 				},
-				"gradient-xy": {
+				"fadeout-to-t": {
+					from: {
+						opacity: "1",
+						transform: "translateY(-89px)",
+					},
+					to: {
+						opacity: "0",
+						transform: "translateY(-100px)",
+					},
+				},
+				"gradient-to-br": {
 					"0%, 100%": {
 						"background-size": "400% 400%",
 						"background-position": "left center",
