@@ -7,7 +7,7 @@ export default function Navbar() {
 			<div className="relative max-w-xs pt-2.5 md:pt-0 lg:pr-2 mx-auto md:max-w-6xl">
 				<div className="flex justify-between font-medium md:justify-center lg:justify-end">
 					<a href="#" className="flex items-center py-5 md:px-2">
-						<Image src={logo} />
+						<Image src={logo} alt="Navbar logo placeholder" />
 					</a>
 					<div className="items-center hidden space-x-1 md:flex">
 						<a
