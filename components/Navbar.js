@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../public/logo.svg";
 
 export default function Navbar() {
@@ -10,15 +11,16 @@ export default function Navbar() {
 						<Image src={logo} alt="Navbar logo placeholder" />
 					</a>
 					<div className="items-center hidden space-x-1 md:flex">
-						<a
-							href="#"
-							className="px-3 py-5 ml-5 text-white hover:text-gray-300"
-						>
-							Home
-						</a>
-						<a href="#" className="px-3 py-5 text-white hover:text-gray-300">
-							Products
-						</a>
+						<Link href="/">
+							<a className="px-3 py-5 ml-5 text-white hover:text-gray-300">
+								Home
+							</a>
+						</Link>
+						<Link href="/main">
+							<a className="px-3 py-5 text-white hover:text-gray-300">
+								Products
+							</a>
+						</Link>
 					</div>
 					<div className="items-center hidden space-x-1 md:flex">
 						<a
@@ -81,9 +83,9 @@ export default function Navbar() {
 				<div className="hidden mobile-menu md:hidden">
 					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-7">
 						<div className="flex justify-between">
-							<a href="#" className="py-0.5 hover:text-violet-500">
-								Home
-							</a>
+							<Link href="/">
+								<a className="py-0.5 hover:text-violet-500">Home</a>
+							</Link>
 							<button
 								onClick={() => {
 									setTimeout(() => {
@@ -115,9 +117,9 @@ export default function Navbar() {
 								</svg>
 							</button>
 						</div>
-						<a href="#" className="py-0.5 hover:text-violet-500">
-							Products
-						</a>
+						<Link href="/main">
+							<a className="py-0.5 hover:text-violet-500">Products</a>
+						</Link>
 						<a href="#" className="py-0.5 hover:text-violet-500">
 							Login
 						</a>
