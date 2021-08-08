@@ -4,13 +4,13 @@
 
 ### :white_check_mark: Home Page
 
-### :red_circle: Signup Page
+### :white_medium_square: Signup Page
 
-### :red_circle: Login Page
+### :white_medium_square: Login Page
 
-### :large_blue_circle: Main Page
+### :white_medium_square: Main Page
 
-### :red_circle: Detail Page
+### :white_medium_square: Detail Page
 
 ## Deployment:
 
