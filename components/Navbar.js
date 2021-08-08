@@ -7,9 +7,11 @@ export default function Navbar() {
 		<nav className="fixed inset-x-0 z-10">
 			<div className="relative max-w-xs pt-2.5 md:pt-0 lg:pr-2 mx-auto md:max-w-6xl">
 				<div className="flex justify-between font-medium md:justify-center lg:justify-end">
-					<a href="#" className="flex items-center py-5 md:px-2">
-						<Image src={logo} alt="Navbar logo placeholder" />
-					</a>
+					<Link href="/">
+						<a className="flex items-center py-5 md:px-2">
+							<Image src={logo} alt="Navbar logo placeholder" />
+						</a>
+					</Link>
 					<div className="items-center hidden space-x-1 md:flex">
 						<Link href="/">
 							<a className="px-3 py-5 ml-5 text-white hover:text-gray-300">
