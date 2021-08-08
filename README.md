@@ -14,4 +14,4 @@
 
 ## Deployment:
 
-[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://internship-project-7emorcwoy-colstonbod-oy.vercel.app/)
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://internship-project-zeta.vercel.app/)
