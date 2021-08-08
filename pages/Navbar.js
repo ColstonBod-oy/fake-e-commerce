@@ -14,10 +14,10 @@ export default function Navbar() {
 							href="#"
 							className="px-3 py-5 ml-5 text-white hover:text-gray-300"
 						>
-							Main
+							Home
 						</a>
 						<a href="#" className="px-3 py-5 text-white hover:text-gray-300">
-							Details
+							Products
 						</a>
 					</div>
 					<div className="items-center hidden space-x-1 md:flex">
@@ -82,7 +82,7 @@ export default function Navbar() {
 					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-7">
 						<div className="flex justify-between">
 							<a href="#" className="py-0.5 hover:text-violet-500">
-								Main
+								Home
 							</a>
 							<button
 								onClick={() => {
@@ -116,7 +116,7 @@ export default function Navbar() {
 							</button>
 						</div>
 						<a href="#" className="py-0.5 hover:text-violet-500">
-							Details
+							Products
 						</a>
 						<a href="#" className="py-0.5 hover:text-violet-500">
 							Login

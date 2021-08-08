@@ -1,15 +1,13 @@
-# :disappointed: Unfinished
+# :warning: In Progress
 
-### reason:
+### Checklist:
 
-Started the project late.
+:white_check_mark: Home Page
+:red_circle: Signup Page
+:red_circle: Login Page
+:large_blue_circle: Main Page
+:red_circle: Detail Page
 
-First time using tailwind css got carried away on  
-the designing part and making it fully responsive.
-
-If given the chance, I'll be glad to continue doing projects like these  
-as this is my first time applying for an internship.
-
-### deployment:
+### Deployment:
 
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://internship-project-7emorcwoy-colstonbod-oy.vercel.app/)
