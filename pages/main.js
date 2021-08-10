@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Card from "../components/Card";
 
-const defaultEndpoint = "https://fakestoreapi.com/products";
+const defaultEndpoint =
+	"https://fakestoreapi.com/products/category/electronics";
 
 export const getStaticProps = async () => {
 	const res = await fetch(defaultEndpoint);
@@ -24,11 +25,13 @@ export default function Main({ results }) {
 				</div>
 			</div>
 
-			{results.map((result) => (
-				<div key={result.id} className="relative w-48 h-60">
-					<Image src={result.image} layout="fill" alt="Product image" />
+			<div className="container relative px-6 mx-auto top-24">
+				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					{results.map((result) => (
+						<Card key={result.id} {...result} />
+					))}
 				</div>
-			))}
+			</div>
 		</div>
 	);
 }
