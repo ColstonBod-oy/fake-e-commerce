@@ -9,7 +9,7 @@ export default function Card({
 	image,
 }) {
 	return (
-		<a className="w-full max-w-sm pt-4 mx-auto overflow-hidden bg-white rounded-md shadow-md">
+		<a className="z-10 w-full max-w-sm pt-4 mx-auto overflow-hidden bg-white rounded-md shadow-md">
 			<div className="relative flex justify-end w-full h-56">
 				<Image src={image} layout="fill" objectFit="contain" alt={title} />
 				<button className="absolute p-2 mx-5 -mb-4 rounded-full bg-cyan-400 text-violet-500 hover:bg-cyan-200 focus:outline-none focus:bg-cyan-200">

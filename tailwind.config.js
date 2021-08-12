@@ -29,13 +29,13 @@ module.exports = {
 					},
 					"100%": {
 						opacity: "1",
-						transform: "translateY(-89px)",
+						transform: "translateY(-79px)",
 					},
 				},
 				"fadeout-to-t": {
 					from: {
 						opacity: "1",
-						transform: "translateY(-89px)",
+						transform: "translateY(-79px)",
 					},
 					to: {
 						opacity: "0",

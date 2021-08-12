@@ -1,11 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import logo from "../public/logo.svg";
 
 export default function Navbar() {
+	const router = useRouter();
+
 	return (
-		<nav className="fixed inset-x-0 z-10">
-			<div className="relative max-w-xs pt-2.5 md:pt-0 lg:pr-2 mx-auto md:max-w-6xl">
+		<nav
+			className={
+				"fixed inset-x-0 z-20 lg:bg-opacity-0 " +
+				(router.asPath === "/main" ? "bg-emerald-300" : "")
+			}
+		>
+			<div className="relative max-w-xs mx-auto lg:pr-2 md:max-w-6xl">
 				<div className="flex justify-between font-medium md:justify-center lg:justify-end">
 					<Link href="/">
 						<a className="flex items-center py-5 md:px-2">
@@ -83,7 +91,7 @@ export default function Navbar() {
 				</div>
 				{/* mobile menu */}
 				<div className="hidden mobile-menu md:hidden">
-					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-7">
+					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-5">
 						<div className="flex justify-between">
 							<Link href="/">
 								<a className="py-0.5 hover:text-violet-500">Home</a>
