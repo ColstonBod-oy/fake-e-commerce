@@ -1,24 +1,36 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import logo from "../public/logo.svg";
 
 export default function Navbar() {
+	const router = useRouter();
+
 	return (
-		<nav className="fixed inset-x-0 z-10">
-			<div className="relative max-w-xs pt-2.5 md:pt-0 lg:pr-2 mx-auto md:max-w-6xl">
+		<nav
+			className={
+				"fixed inset-x-0 z-20 lg:bg-opacity-0 " +
+				(router.asPath === "/main" ? "bg-emerald-300" : "")
+			}
+		>
+			<div className="relative max-w-xs mx-auto lg:pr-2 md:max-w-6xl">
 				<div className="flex justify-between font-medium md:justify-center lg:justify-end">
-					<a href="#" className="flex items-center py-5 md:px-2">
-						<Image src={logo} alt="Navbar logo placeholder" />
-					</a>
+					<Link href="/">
+						<a className="flex items-center py-5 md:px-2">
+							<Image src={logo} alt="Navbar logo placeholder" />
+						</a>
+					</Link>
 					<div className="items-center hidden space-x-1 md:flex">
-						<a
-							href="#"
-							className="px-3 py-5 ml-5 text-white hover:text-gray-300"
-						>
-							Home
-						</a>
-						<a href="#" className="px-3 py-5 text-white hover:text-gray-300">
-							Products
-						</a>
+						<Link href="/">
+							<a className="px-3 py-5 ml-5 text-white hover:text-gray-300">
+								Home
+							</a>
+						</Link>
+						<Link href="/main">
+							<a className="px-3 py-5 text-white hover:text-gray-300">
+								Products
+							</a>
+						</Link>
 					</div>
 					<div className="items-center hidden space-x-1 md:flex">
 						<a
@@ -79,11 +91,11 @@ export default function Navbar() {
 				</div>
 				{/* mobile menu */}
 				<div className="hidden mobile-menu md:hidden">
-					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-7">
+					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-5">
 						<div className="flex justify-between">
-							<a href="#" className="py-0.5 hover:text-violet-500">
-								Home
-							</a>
+							<Link href="/">
+								<a className="py-0.5 hover:text-violet-500">Home</a>
+							</Link>
 							<button
 								onClick={() => {
 									setTimeout(() => {
@@ -115,9 +127,9 @@ export default function Navbar() {
 								</svg>
 							</button>
 						</div>
-						<a href="#" className="py-0.5 hover:text-violet-500">
-							Products
-						</a>
+						<Link href="/main">
+							<a className="py-0.5 hover:text-violet-500">Products</a>
+						</Link>
 						<a href="#" className="py-0.5 hover:text-violet-500">
 							Login
 						</a>

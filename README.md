@@ -8,7 +8,7 @@
 
 ### :white_large_square: Login Page
 
-### :white_large_square: Main Page
+### :white_check_mark: Main Page
 
 ### :white_large_square: Detail Page
 
