@@ -59,7 +59,7 @@ export default function Navbar() {
 					{/* mobile menu button */}
 					<div className="flex items-center md:hidden">
 						<button
-							className="px-3 py-2 text-white bg-gray-200 bg-opacity-50 rounded-3xl"
+							className="px-3 py-2 text-gray-900 bg-white rounded-3xl"
 							onClick={() => {
 								document
 									.querySelector(".mobile-menu")
