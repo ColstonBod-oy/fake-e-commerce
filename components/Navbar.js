@@ -3,6 +3,24 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import logo from "../public/logo.svg";
 
+const menuFadeIn = () => {
+	document.querySelector(".mobile-menu").classList.toggle("hidden");
+	document
+		.querySelector(".mobile-menu")
+		.classList.remove("animate-fadeout-to-t");
+	document.querySelector(".mobile-menu").classList.add("animate-fadein-to-b");
+};
+
+const menuFadeOut = () => {
+	setTimeout(() => {
+		document.querySelector(".mobile-menu").classList.toggle("hidden");
+	}, 210);
+	document
+		.querySelector(".mobile-menu")
+		.classList.remove("animate-fadein-to-b");
+	document.querySelector(".mobile-menu").classList.add("animate-fadeout-to-t");
+};
+
 export default function Navbar() {
 	const router = useRouter();
 
@@ -60,17 +78,7 @@ export default function Navbar() {
 					<div className="flex items-center md:hidden">
 						<button
 							className="px-3 py-2 text-gray-900 bg-white rounded-3xl"
-							onClick={() => {
-								document
-									.querySelector(".mobile-menu")
-									.classList.toggle("hidden");
-								document
-									.querySelector(".mobile-menu")
-									.classList.remove("animate-fadeout-to-t");
-								document
-									.querySelector(".mobile-menu")
-									.classList.add("animate-fadein-to-b");
-							}}
+							onClick={menuFadeIn}
 						>
 							<svg
 								className="w-6 h-6"
@@ -94,23 +102,14 @@ export default function Navbar() {
 					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-5">
 						<div className="flex justify-between">
 							<Link href="/">
-								<a className="py-0.5 hover:text-violet-500">Home</a>
+								<a
+									className="py-0.5 hover:text-violet-500"
+									onClick={menuFadeOut}
+								>
+									Home
+								</a>
 							</Link>
-							<button
-								onClick={() => {
-									setTimeout(() => {
-										document
-											.querySelector(".mobile-menu")
-											.classList.toggle("hidden");
-									}, 210);
-									document
-										.querySelector(".mobile-menu")
-										.classList.remove("animate-fadein-to-b");
-									document
-										.querySelector(".mobile-menu")
-										.classList.add("animate-fadeout-to-t");
-								}}
-							>
+							<button onClick={menuFadeOut}>
 								<svg
 									className="w-6 h-6"
 									fill="none"
@@ -128,7 +127,9 @@ export default function Navbar() {
 							</button>
 						</div>
 						<Link href="/main">
-							<a className="py-0.5 hover:text-violet-500">Products</a>
+							<a className="py-0.5 hover:text-violet-500" onClick={menuFadeOut}>
+								Products
+							</a>
 						</Link>
 						<a href="#" className="py-0.5 hover:text-violet-500">
 							Login
