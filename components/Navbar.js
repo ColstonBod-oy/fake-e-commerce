@@ -77,7 +77,7 @@ export default function Navbar() {
 					{/* mobile menu button */}
 					<div className="flex items-center md:hidden">
 						<button
-							className="px-3 py-2 text-gray-900 bg-white rounded-3xl"
+							className="px-3 py-2 text-gray-900 bg-white rounded-3xl hover:text-violet-500"
 							onClick={menuFadeIn}
 						>
 							<svg
@@ -99,17 +99,9 @@ export default function Navbar() {
 				</div>
 				{/* mobile menu */}
 				<div className="hidden mobile-menu md:hidden">
-					<div className="absolute flex flex-col w-full py-6 pl-10 pr-6 bg-white rounded-md shadow-lg top-5">
-						<div className="flex justify-between">
-							<Link href="/">
-								<a
-									className="py-0.5 hover:text-violet-500"
-									onClick={menuFadeOut}
-								>
-									Home
-								</a>
-							</Link>
-							<button onClick={menuFadeOut}>
+					<div className="absolute flex flex-col items-start w-full pt-6 pb-10 pl-10 pr-6 text-lg font-semibold bg-white rounded-md shadow-lg top-5">
+						<div className="flex self-end">
+							<button className="hover:text-violet-500" onClick={menuFadeOut}>
 								<svg
 									className="w-6 h-6"
 									fill="none"
@@ -126,15 +118,20 @@ export default function Navbar() {
 								</svg>
 							</button>
 						</div>
+						<Link href="/">
+							<a className="pb-1.5 hover:text-violet-500" onClick={menuFadeOut}>
+								Home
+							</a>
+						</Link>
 						<Link href="/main">
-							<a className="py-0.5 hover:text-violet-500" onClick={menuFadeOut}>
+							<a className="py-1.5 hover:text-violet-500" onClick={menuFadeOut}>
 								Products
 							</a>
 						</Link>
-						<a href="#" className="py-0.5 hover:text-violet-500">
+						<a href="#" className="py-1.5 hover:text-violet-500">
 							Login
 						</a>
-						<a href="#" className="py-0.5 hover:text-violet-500">
+						<a href="#" className="pt-1.5 hover:text-violet-500">
 							Signup
 						</a>
 					</div>
