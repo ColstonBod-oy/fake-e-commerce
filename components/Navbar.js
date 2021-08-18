@@ -44,7 +44,7 @@ export default function Navbar() {
 								Home
 							</a>
 						</Link>
-						<Link href="/main">
+						<Link href="/products">
 							<a className="px-3 py-5 text-white hover:text-gray-300">
 								Products
 							</a>
