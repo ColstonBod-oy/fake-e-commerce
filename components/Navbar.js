@@ -23,12 +23,17 @@ const menuFadeOut = () => {
 
 export default function Navbar() {
 	const router = useRouter();
+	const { slug } = router.query;
 
 	return (
 		<nav
 			className={
-				"fixed inset-x-0 z-20 lg:bg-opacity-0 " +
-				(router.asPath === "/main" ? "bg-emerald-300" : "")
+				"fixed inset-x-0 z-20 " +
+				(router.asPath === "/products"
+					? "bg-emerald-300 lg:bg-opacity-0"
+					: router.asPath === `/products/${slug}`
+					? "bg-violet-400"
+					: "")
 			}
 		>
 			<div className="relative max-w-xs mx-auto lg:pr-2 md:max-w-6xl">
@@ -77,7 +82,7 @@ export default function Navbar() {
 					{/* mobile menu button */}
 					<div className="flex items-center md:hidden">
 						<button
-							className="px-3 py-2 text-gray-900 bg-white rounded-3xl hover:text-violet-500"
+							className="px-3 py-2 text-gray-900 bg-white rounded-3xl hover:text-violet-500 focus:text-violet-500"
 							onClick={menuFadeIn}
 						>
 							<svg
@@ -101,7 +106,10 @@ export default function Navbar() {
 				<div className="hidden mobile-menu md:hidden">
 					<div className="absolute flex flex-col items-start w-full pt-6 pb-10 pl-10 pr-6 text-lg font-semibold bg-white rounded-md shadow-lg top-5">
 						<div className="flex self-end">
-							<button className="hover:text-violet-500" onClick={menuFadeOut}>
+							<button
+								className="hover:text-violet-500 focus:text-violet-500"
+								onClick={menuFadeOut}
+							>
 								<svg
 									className="w-6 h-6"
 									fill="none"
@@ -119,19 +127,31 @@ export default function Navbar() {
 							</button>
 						</div>
 						<Link href="/">
-							<a className="pb-1.5 hover:text-violet-500" onClick={menuFadeOut}>
+							<a
+								className="pb-1.5 hover:text-violet-500 focus:text-violet-500"
+								onClick={menuFadeOut}
+							>
 								Home
 							</a>
 						</Link>
-						<Link href="/main">
-							<a className="py-1.5 hover:text-violet-500" onClick={menuFadeOut}>
+						<Link href="/products">
+							<a
+								className="py-1.5 hover:text-violet-500 focus:text-violet-500"
+								onClick={menuFadeOut}
+							>
 								Products
 							</a>
 						</Link>
-						<a href="#" className="py-1.5 hover:text-violet-500">
+						<a
+							href="#"
+							className="py-1.5 hover:text-violet-500 focus:text-violet-500"
+						>
 							Login
 						</a>
-						<a href="#" className="pt-1.5 hover:text-violet-500">
+						<a
+							href="#"
+							className="pt-1.5 hover:text-violet-500 focus:text-violet-500"
+						>
 							Signup
 						</a>
 					</div>
