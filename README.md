@@ -10,7 +10,7 @@
 
 ### :white_check_mark: Main Page
 
-### :white_large_square: Detail Page
+### :white_check_mark: Detail Page
 
 ## Deployment:
 
