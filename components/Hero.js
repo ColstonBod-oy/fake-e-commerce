@@ -16,7 +16,10 @@ export default function Hero() {
 								<div className="pt-4 text-base font-bold leading-6 sm:text-lg sm:leading-7">
 									<p>Don&apos;t have an account yet?</p>
 									<p>
-										<a href="#" className="text-cyan-600 hover:text-cyan-700">
+										<a
+											href="#"
+											className="text-cyan-600 hover:text-cyan-700 focus:text-cyan-700"
+										>
 											{" "}
 											Signup &rarr;{" "}
 										</a>

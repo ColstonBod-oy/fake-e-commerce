@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import ProductCard from "../../components/ProductCard";
 
 const defaultEndpoint =
 	"https://fakestoreapi.com/products/category/electronics";
@@ -28,7 +28,7 @@ export default function Main({ results }) {
 			<div className="container relative px-6 pb-6 mx-auto overflow-y-hidden top-24">
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{results.map((result) => (
-						<Card key={result.id} {...result} />
+						<ProductCard key={result.id} {...result} />
 					))}
 				</div>
 				{/* background color grid end */}
