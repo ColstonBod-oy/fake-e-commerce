@@ -26,7 +26,7 @@ export default function Navbar() {
 	const { slug } = router.query;
 
 	return (
-        <nav
+		<nav
 			className={
 				"fixed inset-x-0 z-20 " +
 				(router.asPath === "/products"
@@ -39,20 +39,20 @@ export default function Navbar() {
 			<div className="relative max-w-xs mx-auto lg:pr-2 md:max-w-6xl">
 				<div className="flex justify-between font-medium md:justify-center lg:justify-end">
 					<Link href="/" className="flex items-center py-5 md:px-2">
-
-                        <Image src={logo} alt="Navbar logo placeholder" />
-
-                    </Link>
+						<Image src={logo} alt="Navbar logo placeholder" />
+					</Link>
 					<div className="items-center hidden space-x-1 md:flex">
-						<Link href="/" className="px-3 py-5 ml-5 text-white hover:text-gray-300">
-							
-								Home
-							
+						<Link
+							href="/"
+							className="px-3 py-5 ml-5 text-white hover:text-gray-300"
+						>
+							Home
 						</Link>
-						<Link href="/products" className="px-3 py-5 text-white hover:text-gray-300">
-							
-								Products
-							
+						<Link
+							href="/products"
+							className="px-3 py-5 text-white hover:text-gray-300"
+						>
+							Products
 						</Link>
 					</div>
 					<div className="items-center hidden space-x-1 md:flex">
@@ -127,20 +127,18 @@ export default function Navbar() {
 							</button>
 						</div>
 						<Link
-                            href="/"
-                            className="pb-1.5 hover:text-violet-500 focus:text-violet-500"
-                            onClick={menuFadeOut}>
-							
-								Home
-							
+							href="/"
+							className="pb-1.5 hover:text-violet-500 focus:text-violet-500"
+							onClick={menuFadeOut}
+						>
+							Home
 						</Link>
 						<Link
-                            href="/products"
-                            className="py-1.5 hover:text-violet-500 focus:text-violet-500"
-                            onClick={menuFadeOut}>
-							
-								Products
-							
+							href="/products"
+							className="py-1.5 hover:text-violet-500 focus:text-violet-500"
+							onClick={menuFadeOut}
+						>
+							Products
 						</Link>
 						<a
 							href="#"
@@ -158,5 +156,5 @@ export default function Navbar() {
 				</div>
 			</div>
 		</nav>
-    );
+	);
 }
