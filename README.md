@@ -23,9 +23,9 @@ This project is licensed under [GPL-3.0](LICENSE).
 
 This project uses the following third-party libraries:
 
-- [Next.js](https://github.com/vercel/next.js) by Vercel, licensed under the [MIT LICENSE](LICENSE-MIT.txt).
-- [React](https://github.com/facebook/react) by Facebook, licensed under the [MIT LICENSE](LICENSE-MIT.txt).
-- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) by Tailwind Labs, licensed under the [MIT LICENSE](LICENSE-MIT.txt).
+- [Next.js](https://github.com/vercel/next.js) by Vercel, licensed under the [MIT License](LICENSE-MIT.txt).
+- [React](https://github.com/facebook/react) by Facebook, licensed under the [MIT License](LICENSE-MIT.txt).
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) by Tailwind Labs, licensed under the [MIT License](LICENSE-MIT.txt).
 
 See the [NOTICE](NOTICE) file for information about authorship and attribution requirements related to this project.
 
